@@ -1,0 +1,262 @@
+{
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "accounts" : [
+          {
+            "pass" : "x6GYOgOan5Sg",
+            "user" : "happ-socks"
+          }
+        ],
+        "auth" : "password",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls"
+        ],
+        "enabled" : true
+      },
+      "tag" : "socks-in"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "accounts" : [
+          {
+            "pass" : "nztMyRAWGTrf",
+            "user" : "happ-http"
+          }
+        ],
+        "auth" : "password"
+      },
+      "tag" : "http-in"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "error" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/connectionLogs\/2026-09-12_12-11-09.log",
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "50.7.87.122",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "42d932cb-8768-41de-b57b-299252a493d2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY",
+          "serverName" : "edge-fr.extazy.money",
+          "shortId" : "ba4b2afa9e7193ea",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Torrenti_1"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "95.133.247.18",
+            "port" : 8443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "42d932cb-8768-41de-b57b-299252a493d2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "dJqaQL_kSl2DFR7Dx3igZXhPuw1uW9d7XejtyYSvkGg",
+          "serverName" : "fr.atlanta-api.com",
+          "shortId" : "aaa2ba7d45c12957",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Torrenti_2"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "188.130.209.151",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "42d932cb-8768-41de-b57b-299252a493d2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "QtRkSpyFPH4bid3bSo2DlFrrUw68YDTj73FXeuDL0js",
+          "serverName" : "duckduckgo.com",
+          "shortId" : "",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Torrenti_3"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "roma1.moritech.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "fingerprint" : "chrome",
+          "serverName" : ""
+        }
+      },
+      "tag" : "Torrenti_4"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "roma2.moritech.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "fingerprint" : "chrome",
+          "serverName" : ""
+        }
+      },
+      "tag" : "Torrenti_5"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "roma3.moritech.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "fingerprint" : "chrome",
+          "serverName" : ""
+        }
+      },
+      "tag" : "Torrenti_6"
+    },
+    {
+      "protocol" : "freedom",
+      "settings" : {
+
+      },
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "settings" : {
+
+      },
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🎁 Torrent+Game ",
+  "routing" : {
+    "balancers" : [
+      {
+        "selector" : [
+          "Torrenti_1",
+          "Torrenti_2",
+          "Torrenti_3",
+          "Torrenti_4",
+          "Torrenti_5",
+          "Torrenti_6"
+        ],
+        "strategy" : {
+          "type" : "random"
+        },
+        "tag" : "all-servers"
+      }
+    ],
+    "domainStrategy" : "AsIs",
+    "rules" : [
+      {
+        "balancerTag" : "all-servers",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+}
