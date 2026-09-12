@@ -1,0 +1,544 @@
+{
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "accounts" : [
+          {
+            "pass" : "WSecuqBNYUTm",
+            "user" : "happ-socks"
+          }
+        ],
+        "auth" : "password",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls"
+        ],
+        "enabled" : true
+      },
+      "tag" : "socks-in"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "accounts" : [
+          {
+            "pass" : "dWJmxWUCFk8Z",
+            "user" : "happ-http"
+          }
+        ],
+        "auth" : "password"
+      },
+      "tag" : "http-in"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "error" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/connectionLogs\/2026-09-12_12-11-32.log",
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "77.223.119.80",
+            "port" : 8200,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "dfad3362-8534-4495-bf49-89f2ae229e7a"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "1KrzmnGnXweOpiuDle8bRNY6BPXWsD7ufzx1uFurl1c",
+          "serverName" : "ru01.arpanet-cdn.com",
+          "shortId" : "",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Config_1"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "tg1.cdnphotos.org",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "f04cc810-aaf2-4a7b-8cad-356cdd30d394"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "tg1.cdnphotos.org"
+        },
+        "xhttpSettings" : {
+          "host" : "",
+          "mode" : "auto",
+          "path" : "\/api\/v1\/",
+          "xmux" : {
+            "maxConcurrency" : "16-32"
+          }
+        }
+      },
+      "tag" : "Config_2"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "88.218.67.137",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "a4db4693-338c-4ccd-93dc-297639530e0d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "grpcSettings" : {
+          "mode" : "gun",
+          "serviceName" : "gun"
+        },
+        "network" : "grpc",
+        "realitySettings" : {
+          "fingerprint" : "edge",
+          "publicKey" : "A4EFCXsK2opMGKRuAAOfUZuj11Vi2O9rdPDk6gpynF4",
+          "serverName" : "slackware.ubuntuhosting.host",
+          "shortId" : "707c8615b9",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Config_3"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "5.23.53.234",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "d73e3cdc-a80b-4e73-a11b-cc467d7a84f8"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "chrome",
+          "publicKey" : "74pbcWZE8Ne6iYrsl_31qy_pWKRrILQiAWfZs2IuGR0",
+          "serverName" : "fin.sdssh-vid.online",
+          "shortId" : "7e0f2634090e768b",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Config_4"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "188.225.39.107",
+            "port" : 14443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "238e492b-bc20-4380-92b6-135d39112ca4"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "aKfJokRORjNdwkn0XY6KA_PIfjytp4E0liM5v72LM1w",
+          "serverName" : "login.vk.com",
+          "shortId" : "8e21c5f4",
+          "spiderX" : ""
+        },
+        "security" : "reality"
+      },
+      "tag" : "Config_5"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "84.38.187.169",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "82282910-54a0-0032-b2df-86bfbce8ed36"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "rJMYW6mHgjs61mHxfm8Gmm_Re23sV_xe5b0IrTpLsiQ",
+          "serverName" : "mc.yandex.tr",
+          "shortId" : "94c9dbbf07366d96",
+          "spiderX" : ""
+        },
+        "security" : "reality",
+        "xhttpSettings" : {
+          "host" : "",
+          "mode" : "auto",
+          "path" : "\/script"
+        }
+      },
+      "tag" : "Config_6"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "84.38.187.169",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "82282910-54a0-0032-b2df-86bfbce8ed36"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "publicKey" : "rJMYW6mHgjs61mHxfm8Gmm_Re23sV_xe5b0IrTpLsiQ",
+          "serverName" : "mc.yandex.tr",
+          "shortId" : "94c9dbbf07366d96",
+          "spiderX" : ""
+        },
+        "security" : "reality",
+        "xhttpSettings" : {
+          "host" : "",
+          "mode" : "auto",
+          "path" : "\/script"
+        }
+      },
+      "tag" : "Config_7"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "135.106.142.209",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "82282910-54a0-0032-b2df-86bfbce8ed36"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "realitySettings" : {
+          "fingerprint" : "ios",
+          "publicKey" : "fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I",
+          "serverName" : "alfastat.ru",
+          "shortId" : "0066a7326f06d426",
+          "spiderX" : ""
+        },
+        "security" : "reality",
+        "xhttpSettings" : {
+          "host" : "",
+          "mode" : "auto",
+          "path" : "\/assets"
+        }
+      },
+      "tag" : "Config_8"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "95.143.188.10",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "82282910-54a0-0032-b2df-86bfbce8ed36"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "realitySettings" : {
+          "fingerprint" : "ios",
+          "publicKey" : "YHPoUNxsml4z6pYt-7djOb1lqnBjxCk4-2mk84pveyc",
+          "serverName" : "git.medrocket.ru",
+          "shortId" : "3b5b38669a1a51c0",
+          "spiderX" : ""
+        },
+        "security" : "reality",
+        "xhttpSettings" : {
+          "host" : "",
+          "mode" : "auto",
+          "path" : "\/repository"
+        }
+      },
+      "tag" : "Config_9"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "135.106.142.209",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "82282910-54a0-0032-b2df-86bfbce8ed36"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "publicKey" : "fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I",
+          "serverName" : "alfastat.ru",
+          "shortId" : "0066a7326f06d426",
+          "spiderX" : ""
+        },
+        "security" : "reality",
+        "xhttpSettings" : {
+          "host" : "alfastat.ru",
+          "mode" : "auto",
+          "path" : "\/assets"
+        }
+      },
+      "tag" : "Config_10"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "84.38.187.134",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "82282910-54a0-0032-b2df-86bfbce8ed36"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "QSAIpsE696lDqkumfo7dyBt92XzrVDPTF6KogbeKhGc",
+          "serverName" : "git.xpkg.ru",
+          "shortId" : "2c9431dc7a306018",
+          "spiderX" : ""
+        },
+        "security" : "reality",
+        "xhttpSettings" : {
+          "host" : "",
+          "mode" : "auto",
+          "path" : "\/repository"
+        }
+      },
+      "tag" : "Config_11"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "norway-3.moritech.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "fingerprint" : "chrome",
+          "serverName" : ""
+        }
+      },
+      "tag" : "Config_12"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "norway-4.moritech.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "fingerprint" : "chrome",
+          "serverName" : ""
+        }
+      },
+      "tag" : "Config_13"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "norway.moritech.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "fingerprint" : "chrome",
+          "serverName" : ""
+        }
+      },
+      "tag" : "Config_14"
+    },
+    {
+      "protocol" : "freedom",
+      "settings" : {
+
+      },
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "settings" : {
+
+      },
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🎁 АвтоОбход ",
+  "routing" : {
+    "balancers" : [
+      {
+        "selector" : [
+          "Config_1",
+          "Config_2",
+          "Config_3",
+          "Config_4",
+          "Config_5",
+          "Config_6",
+          "Config_7",
+          "Config_8",
+          "Config_9",
+          "Config_10",
+          "Config_11",
+          "Config_12",
+          "Config_13",
+          "Config_14"
+        ],
+        "strategy" : {
+          "type" : "random"
+        },
+        "tag" : "all-servers"
+      }
+    ],
+    "domainStrategy" : "AsIs",
+    "rules" : [
+      {
+        "balancerTag" : "all-servers",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+}
