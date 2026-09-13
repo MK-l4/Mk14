@@ -1,0 +1,111 @@
+{
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "194.48.250.233",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "brutalDown" : "2000 mbps",
+            "brutalUp" : "2000 mbps",
+            "congestion" : "brutal",
+            "keepAlivePeriod" : 10,
+            "maxIdleTimeout" : 20
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "373f536e-223b-41ef-ba69-04e707d508b8",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "enableSessionResumption" : false,
+          "fingerprint" : "chrome",
+          "serverName" : "mol.ultimagamest.com"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇩🇪 WaGnErVPN | Основной | Hysteria",
+  "routing" : {
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      }
+    ]
+  }
+}
